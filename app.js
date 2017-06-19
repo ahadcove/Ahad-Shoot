@@ -12,10 +12,11 @@ var serv = require('http').Server(app);
 app.get('/',function(req, res) {
     res.sendFile(__dirname + '/client/index.html'); //This folder
 });
+
 app.use('/client',express.static(__dirname + '/client')); //if specify full client name it will go there ex. mywebsite.com:2000
 //by default your computer is localhost domain
 
-serv.listen(process.env.PORT||2000); //This is for when the port is not online
+serv.listen(process.env.PORT||2200); //This is for when the port is not online
 // serv.listen(2000);
 console.log("server started");
 
